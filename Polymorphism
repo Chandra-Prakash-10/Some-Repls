@@ -1,0 +1,55 @@
+// polymorphism
+#include <bits/stdc++.h>
+using namespace std;
+
+// compile time polymorphism
+// function overloading
+class A {
+public:
+  void sayHello() { cout << "Hello Sir" << endl; }
+
+  void sayHello(string name) { cout << "Hello" << endl; }
+};
+
+// operator overloading
+class B {
+public:
+  int a;
+  int b;
+  void operator+(B &obj) {
+    int val1 = this->a;
+    int val2 = obj.a;
+    cout << val1 - val2 << endl;
+  }
+};
+
+// run time
+class Animal {
+
+public:
+  void speak() { cout << "speak" << endl; }
+};
+
+class dog : public Animal {
+
+public:
+  void speak() { cout << "bark" << endl; }
+};
+
+int main() {
+  /*
+  A obj;
+  obj.sayHello();
+  obj.sayHello("hello");
+  */
+
+  /*
+  B obj1, obj2;
+  obj1.a = 7;
+  obj2.a = 3;
+  obj1 + obj2;
+  */
+
+  dog bruno;
+  bruno.speak();
+}
