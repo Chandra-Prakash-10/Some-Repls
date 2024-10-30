@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void multiSet(){
+  multiset<int> ms;
+  ms.insert(1);
+  ms.insert(1);
+  ms.insert(1); //{1,1,1}
+
+  ms.erase(1); // it will delete all 1
+
+  ms.erase(ms.find(1)); //erasing single 1
+
+  //rest everything same as set
+}
+
+
+void map(){
+  map<int,int> mpp;
+
+  mpp.emplace({3,4});
+  mpp.insert({1,2});
+  mpp[5] = 2;
+
+  //rest functions same as set  
+}
+
+//writing custom compartor for pair
+bool comp(pair<int,int> p1, pair<int,int> p2){
+  if(p1.second <  p2.second) return true;
+  if(p1.second > p2.second) return false;
+
+  //Condition -> they are same
+  if(p1.first > p2.first) return true;
+  return false;
+}
+int main() {
+  cout << "Hello! we are practicing rest of STL lecture" << endl;
+}
